@@ -1,0 +1,22 @@
+.jumbotron {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace
+}
+
+h1.jumbotron {
+  font-size: 400%;
+}
+
+img {
+  width: 350px;
+  height: 300px;
+  margin-top: 30px;
+}
+
+body {
+  background-color: rgb(14, 53, 88);
+}
+
+.card-body {
+  text-align: center;
+}
