@@ -7,6 +7,10 @@ h1.jumbotron {
   font-size: 400%;
 }
 
+h2 {
+  text-align: center;
+}
+
 img {
   width: 350px;
   height: 300px;
@@ -17,6 +21,19 @@ body {
   background-color: rgb(14, 53, 88);
 }
 
-.card-body {
+p {
   text-align: center;
+}
+
+footer {
+  color: white;
+}
+
+.submit-btn {
+  text-align: center;
+}
+
+.warning {
+  color: red;
+  font-style: bold;
 }
