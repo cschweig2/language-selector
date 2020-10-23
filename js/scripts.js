@@ -57,29 +57,34 @@ $(document).ready(function() {
       go++;
     }
 
-    if ((cSharp + javaScript + go) != 5) {
+    if ((cSharp + javaScript + go) < 4) {
       $("#result").hide();
-      $("#warning").show();
+      $("#warning").show(200);
     } else {
       if (cSharp > javaScript && cSharp > go) {
-        $("#result").show();
+        $("#result").show(200);
         $("#result-text").text("C#");
+        $("#warning").hide();
       }
       if (javaScript > cSharp && javaScript > go) {
-        $("#result").show();
+        $("#result").show(200);
         $("#result-text").text("JavaScript");
+        $("#warning").hide();
       }
       if (go > javaScript && go > cSharp) {
-        $("#result").show();
+        $("#result").show(200);
         $("#result-text").text("Go");
+        $("#warning").hide();
       }
       if (cSharp === javaScript && cSharp > go) {
-        $("#result").show();
+        $("#result").show(200);
         $("#result-text").text("C#");
+        $("#warning").hide();
       }
       if (javaScript === go && javaScript > cSharp) {
-        $("#result").show();
+        $("#result").show(200);
         $("#result-text").text("JavaScript");
+        $("#warning").hide();
       }
     }
 

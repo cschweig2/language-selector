@@ -46,6 +46,7 @@ footer {
 
 #result {
   display: none;
+  margin-top: 50px;
 }
 
 .col-6 {
