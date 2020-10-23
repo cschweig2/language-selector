@@ -40,8 +40,15 @@ footer {
 .warning {
   color: red;
   font-style: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #result {
   display: none;
+}
+
+.col-6 {
+  float: none;
+  margin: 0 auto;
 }

@@ -1,30 +1,16 @@
 $(document).ready(function() {
   $("form#quiz").submit(function(event) {
 
-    if ($("input:radio[name=q1]:checked") != true) {
-      $("#warning").show();
-    } else if ($("input:radio[name=q2]:checked") != true) {
-      $("#warning").show();
-    } else if ($("input:radio[name=q3]:checked") != true) {
-      $("#warning").show();
-    } else if ($("input:radio[name=q4]:checked") != true) {
-      $("#warning").show();
-    } else if ($("input:radio[name=q5]:chedked") != true) {
-      $("#warning").show();
-    } else {
-      $("#warning").hide();
-    }
-
     const answer1 = $("input:radio[name=q1]:checked").val();
     const answer2 = $("input:radio[name=q2]:checked").val();
     const answer3 = $("input:radio[name=q3]:checked").val();
     const answer4 = $("input:radio[name=q4]:checked").val();
     const answer5 = $("input:radio[name=q5]:checked").val();
-    
+
     let cSharp = 0;
     let javaScript = 0;
     let go = 0;
-
+    
     if (answer1 === "cSharp") {
       cSharp++;
     }
@@ -71,18 +57,33 @@ $(document).ready(function() {
       go++;
     }
 
-    if (cSharp > javaScript && cSharp > go) {
-      $("#result").show();
-      $("#result-text").text("cSharp");
+    if ((cSharp + javaScript + go) != 5) {
+      $("#result").hide();
+      $("#warning").show();
+    } else {
+      if (cSharp > javaScript && cSharp > go) {
+        $("#result").show();
+        $("#result-text").text("C#");
+      }
+      if (javaScript > cSharp && javaScript > go) {
+        $("#result").show();
+        $("#result-text").text("JavaScript");
+      }
+      if (go > javaScript && go > cSharp) {
+        $("#result").show();
+        $("#result-text").text("Go");
+      }
+      if (cSharp === javaScript && cSharp > go) {
+        $("#result").show();
+        $("#result-text").text("C#");
+      }
+      if (javaScript === go && javaScript > cSharp) {
+        $("#result").show();
+        $("#result-text").text("JavaScript");
+      }
     }
-    if(javaScript > cSharp && javaScript > go) {
-      $("#result").show();
-      $("#result-text").text("JavaScript");
-    }
-    if (go > javaScript && go > cSharp) {
-      $("#result").show();
-      $("#result-text").text("Go");
-    }
+
+    
 
     event.preventDefault();
   });
