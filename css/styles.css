@@ -1,6 +1,5 @@
-.jumbotron {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace
+body {
+  background-color: rgb(14, 53, 88);
 }
 
 h1.jumbotron {
@@ -11,22 +10,27 @@ h2 {
   text-align: center;
 }
 
-img {
-  width: 350px;
-  height: 300px;
-  margin-top: 30px;
-}
-
-body {
-  background-color: rgb(14, 53, 88);
+h3.warning {
+  display: none;
 }
 
 p {
   text-align: center;
 }
 
+img {
+  width: 350px;
+  height: 300px;
+  margin-top: 30px;
+}
+
 footer {
   color: white;
+}
+
+.jumbotron {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace
 }
 
 .submit-btn {
@@ -36,4 +40,8 @@ footer {
 .warning {
   color: red;
   font-style: bold;
+}
+
+#result {
+  display: none;
 }

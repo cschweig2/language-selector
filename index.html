@@ -26,7 +26,7 @@
               <h2 class="card-header">Question #1</h2>
               <div class="card-body">
                 
-                  <div class="form-group">
+                  <div class="form-group" required>
                     <p>When picking out your outfit for the day, what do you typically choose to wear?</p>
                     <div class="radio">
                       <label>
@@ -60,19 +60,19 @@
                     <p>When picking out your outfit for the day, what do you typically choose to wear?</p>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="cSharp">
+                        <input type="radio" name="q2" value="cSharp">
                         I wear the same thing every day; I like to keep it simple!
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="javaScript">
+                        <input type="radio" name="q2" value="javaScript">
                         I typically choose a unique-looking outfit so I can stand out in the crowd. Life's too short to dress boring!
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="go">
+                        <input type="radio" name="q2" value="go">
                         I always wear fashion that's currently in-style. It's important for me to look great even if I look like everyone else.
                       </label>
                     </div>
@@ -94,19 +94,19 @@
                     <p>When picking out your outfit for the day, what do you typically choose to wear?</p>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="cSharp">
+                        <input type="radio" name="q3" value="cSharp">
                         I wear the same thing every day; I like to keep it simple!
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="javaScript">
+                        <input type="radio" name="q3" value="javaScript">
                         I typically choose a unique-looking outfit so I can stand out in the crowd. Life's too short to dress boring!
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="go">
+                        <input type="radio" name="q3" value="go">
                         I always wear fashion that's currently in-style. It's important for me to look great even if I look like everyone else.
                       </label>
                     </div>
@@ -124,34 +124,78 @@
                     <p>When picking out your outfit for the day, what do you typically choose to wear?</p>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="cSharp">
+                        <input type="radio" name="q4" value="cSharp">
                         I wear the same thing every day; I like to keep it simple!
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="javaScript">
+                        <input type="radio" name="q4" value="javaScript">
                         I typically choose a unique-looking outfit so I can stand out in the crowd. Life's too short to dress boring!
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="q1" value="go">
+                        <input type="radio" name="q4" value="go">
                         I always wear fashion that's currently in-style. It's important for me to look great even if I look like everyone else.
                       </label>
                     </div>
                   </div>
+
               </div>
             </div>
           </div>
         </div>
-      </form>
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <h2 class="card-header">Question #5</h2>
+              <div class="card-body">
+                <div class="form-group">
+                  <p>When it's raining outside, what do you like to do for fun?</p>
+                  <div class="radio">
+                    <label>
+                      <input type ="radio" name="q5" value="cSharp">
+                      Sit inside and put together a puzzle.
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="q5" value="javaScript">
+                      I like to go for a walk or hike and splash in the puddles. Who cares if I get a little dirty if I'm having fun?!
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="q5" value="go">
+                      I love to find the most instagrammable coffee shop to sit inside while reading a book.
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <br>
       <br>
+      
       <div class="row">
         <div class="col-12 submit-btn">
-          <input onclick="this.innerHTML = 'Thank you!'" type="Submit" value="submit" class="submit">
+          <input type="submit" value="submit" id="submit">
           <h3 id="warning" class="warning">Please answer ALL questions</h3>
+        </div>
+      </div>
+      </form>
+      <div class="row" id="result">
+        <div class="col-12">
+          <div class="card">
+            <h2 class="card-header">Result</h2>
+            <div class="card-body">
+              <div class="card-text">
+                <p>You would be most suited for <span id="result-text"></span> progamming language.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <br>
