@@ -78,9 +78,3 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
-
-
-// there are 5 questions
-// one outcome needs at least 3 out of 5 
-// there could be a tie between two 
-// 
