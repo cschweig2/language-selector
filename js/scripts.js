@@ -41,7 +41,7 @@ $(document).ready(function() {
     if (answer4 === "cSharp") {
       cSharp++;
     }
-    if (answer4 === "JavaScript") {
+    if (answer4 === "javaScript") {
       javaScript++;
     }
     if (answer4 === "go") {
@@ -61,11 +61,11 @@ $(document).ready(function() {
       $("#result").hide();
       $("#warning").show(200);
     } else {
-      if (cSharp >= 3) {
+      if (cSharp >= 3 || ((cSharp === javaScript || cSharp === go) && cSharp > 1)) {
         $("#result").show(200);
         $("#result-text").text("C#");
         $("#warning").hide();
-      } else if (javaScript >= 3) {
+      } else if (javaScript >= 3 || (javaScript === go && javaScript > 1)) {
         $("#result").show(200);
         $("#result-text").text("JavaScript");
         $("#warning").hide();
@@ -78,3 +78,9 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
+
+
+// there are 5 questions
+// one outcome needs at least 3 out of 5 
+// there could be a tie between two 
+// 
